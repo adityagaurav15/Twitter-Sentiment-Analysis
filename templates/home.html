@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rexxion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+    <link rel="icon" href="images/favicon.ico">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section id="main">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="details">
+                    <h1>Twitter Sentiment Analysis</h1>
+                    <br>
+                    <p style="color:khaki; margin-left: 8rem;">Try Sentiment analysis to know how people are talking
+                        about your product, compaign, services</p>
+                    <form method="post" name="Userinput" id="Userinput" action="\get_analysis">
+                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            Hash Tag</p>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input
+                            type="text" name="userid" placeholder="Enter hashtag" required><br><br>
+                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            Number of Tweets</p>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input
+                            type="number" name="hashtag" placeholder="Enter no. of tweets" required><br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <input id="subscribe-btn" type="submit" class=" sp2 btn btn-outline-warning"></input>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6">
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="profile">
+        <div class="row">
+            <div class="col-lg-6">
+                <img class="ankit" src="{{ url_for('static', filename='images/logo.png')}}" width="400" alt="">
+                <p class="ankit_p"> working together to
+                    advance the state of the art in artificial intelligence, Data Visualisation,
+                    Web Development
+                </p>
+                <div class="ankit_icon">
+                    <i onclick="link()" class=" icon_p fab fa-linkedin fa-2x"></i>
+                    <i onclick="myGit()" class="icon_p fab fa-github fa-2x"></i>
+                    <i onclick="podFunction()" class=" icon_p fas fa-microphone fa-2x"></i>
+                    <i onclick="disFunction()" class="icon_p fab fa-discord fa-2x"></i>
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="p-image">About Twitter Sentiment Analysis </h2>
+
+                <p class="profile_p" style="margin-left: 2rem">This project will tell us about all the
+                    aspects(positive, negative, neutral, etc) of what
+                    we want to know from the recent few tweets.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="info">
+        <img class="test-images" src="{{ url_for('static', filename='images/test.png')}}" alt="">
+        <div class="testi">
+
+
+            <div class='container mx-auto mt-5 col-md-10 col-11'>
+                <div class="header"> Group Member </div>
+                <div class="row" style="justify-content: center">
+                    <div class="card-2 col-md-3 col-11">
+                        <div class="card-content">
+                            <div class="card-body p-0">
+                                <div class="profile mb-4 mt-3"> <img
+                                        src="{{ url_for('static', filename='images/ankit.png')}}"> </div>
+                                <div class="card-subtitle">
+                                    <p> <small class="text-dark"> <i class="fas fa-quote-left"></i> I'm Student of
+                                            United College of Engineering and Research <i
+                                                class="fas fa-quote-left fa-flip-horizontal"></i> </small> </p>
+                                </div>
+                                <br>
+                                <div class="card-body company"> <i class="fas fa-microphone fa-2x"></i> <small
+                                        class="intro text-muted">Ankit Mishra, CSE (1701010030)</small> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-2 col-md-3 col-11 second">
+                        <div class="card-content">
+                            <div class="card-body p-0">
+                                <div class="profile mb-4 mt-3"> <img
+                                        src="{{ url_for('static', filename='images/adi.png')}}"> </div>
+                                <div class="card-subtitle">
+                                    <p> <small class="text-dark"> <i class="fas fa-quote-left "></i> I'm Student of
+                                            United College of Engineering and Research <i
+                                                class="fas fa-quote-left fa-flip-horizontal"></i> </small> </p>
+                                </div>
+                                <div class="card-body company"> <i class="fas fa-microphone fa-2x"></i><small
+                                        class="intro text-muted">Aditya Gaurav, CSE (1701010012)</small> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-2 col-md-3 col-11 second">
+                        <div class="card-content">
+                            <div class="card-body p-0">
+                                <div class="profile mb-4 mt-3"> <img
+                                        src="{{ url_for('static', filename='images/arpit.jpeg')}}"> </div>
+                                <div class="card-subtitle">
+                                    <p> <small class="text-dark"> <i class="fas fa-quote-left "></i> I'm Student of
+                                            United College of Engineering and Research <i
+                                                class="fas fa-quote-left fa-flip-horizontal"></i> </small> </p>
+                                </div>
+                                <div class="card-body company"> <i class="fas fa-microphone fa-2x"></i><small
+                                        class="intro text-muted">Arpit Patel, CSE (1701010037)</small> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-2 col-md-3 col-11 third">
+                        <div class="card-content">
+                            <div class="card-body p-0">
+                                <div class="profile mb-4 mt-3"> <img
+                                        src="{{ url_for('static', filename='images/bd.jpeg')}}"> </div>
+                                <div class="card-subtitle">
+                                    <p> <small class="text-dark"> <i class="fas fa-quote-left"></i> I'm Student of
+                                            United College of Engineering and Research <i
+                                                class="fas fa-quote-left fa-flip-horizontal"></i> </small> </p>
+                                </div>
+                                <div class="card-body company"> <i class="fas fa-microphone fa-2x"></i><small
+                                        class="intro text-muted">Bindhyvasini Singh, CSE (1701010048)</small> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="footer">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="f-images">Get In Touch</h2>
+            </div>
+            <div class="text col-lg-6">
+                <h5>Mailing Address</h5>
+                <p>Prayagraj, Uttar Pradesh, India</p>
+
+                <br>
+                <h5>Have Questions ??</h5>
+                <p>Follow me on Social Media for QNA and stay up to date with my Blogs & Podcast.
+                <p>
+                    <i onclick="insta()" class=" icon fab fa-instagram fa-2x"></i>
+                    <i onclick="link()" class=" icon fab fa-linkedin fa-2x"></i>
+                    <i onclick="myGit()" class="icon fab fa-github fa-2x"></i>
+                    <i onclick="disFunction()" class="icon fab fa-discord fa-2x"></i>
+
+            </div>
+        </div>
+    </footer>
+    <script>
+        function youFunction() {
+            location.assign("https://www.youtube.com/channel/UCtyuRajg2ORj8xb6LBD_eOQ")
+        }
+        function podFunction() {
+            location.assign("https://anchor.fm/the-rexxion-show")
+        }
+        function vizzFunction() {
+            location.assign("https://public.tableau.com/profile/ankit.mishra777#!/")
+        }
+        function myGit() {
+            location.assign("https://github.com/Ankitrob777")
+        }
+        function project() {
+            location.assign("project.html")
+        }
+        function index() {
+            location.assign("index.html")
+        }
+        function disFunction() {
+            location.assign("https://discord.gg/cj6AN5")
+        }
+        function link() {
+            location.assign("https://www.linkedin.com/in/ankit-mishra-55b0a15a")
+        }
+        function insta() {
+            location.assign("https://www.instagram.com/ankit_i_17/")
+        }
+        function check() {
+            location.assign("blog.html")
+        }
+        function subscribe() {
+            location.assign("form.html")
+        }
+    </script>
+</body>
+
+</html>
